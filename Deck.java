@@ -15,6 +15,14 @@ public class Deck {
     }
 
     /**
+     * Copy Constructor
+     * @param c deck being copied
+     */
+    public Deck(Deck c){
+        Collections.copy(this.deck, c.getCards());
+    }
+
+    /**
      * OVERLOADED CONSTRUCTOR THAT ADDS ALL 52 CARDS TO THE DECK BY ITERATING THROUGH ALL SUITS AND ALL RANKS
      * @param makeDeck
      */
@@ -39,6 +47,16 @@ public class Deck {
     public void addCard(Card card){
         deck.add(card);
     }
+
+    /**
+     * AN ARRAYLIST OF CARDS TO BE ADDED TO THIS DECK
+     * @param cards
+     */
+    public void addCards(ArrayList<Card> cards){
+        deck.addAll(cards);
+    }
+
+
 
     /**
      * toString() METHOD
@@ -100,12 +118,23 @@ public class Deck {
     }
 
     /**
-     * AN ARRAYLIST OF CARDS TO BE ADDED TO THIS DECK
-     * @param cards
+     * METHOD
+     * @return THE AMOUNT OF CARDS LEFT IN THE DECK
      */
-    public void addCards(ArrayList<Card> cards){
-        deck.addAll(cards);
+    public int cardsLeft(){
+        return deck.size();
     }
+
+
+    /**
+     *
+     * @return the arraylist containing all the cards in this deck
+     */
+    public ArrayList<Card> getCards() {
+        return deck;
+    }
+
+
 
     /**
      * TAKE ALL THE CARDS FROM A DISCARDED DECK AND PLACE THEM IN THIS DECK SHUFFLED
@@ -113,17 +142,11 @@ public class Deck {
      * @param discard   THE DECK WE'RE GETTING THE CARDS FROM
      */
     public void reloadDeckFromDiscard(Deck discard){
-        this.addCard(discard.getCards());
+        this.addCards(discard.getCards());
         this.shuffle();
         discard.emptyDeck();
         System.out.println("Ran out of cards, creating a new deck from discard pile and shuffling deck.");
     }
 
-    /**
-     * METHOD
-     * @return THE AMOUNT OF CARDS LEFT IN THE DECK
-     */
-    public int cardsLeft(){
-        return deck.size();
-    }
+
 }
