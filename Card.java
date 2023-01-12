@@ -1,5 +1,3 @@
-package boaFinalProject;
-
 public class Card {
 
     //VARIABLES
