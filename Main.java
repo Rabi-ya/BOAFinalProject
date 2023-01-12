@@ -16,7 +16,7 @@ public class Main {
                 "  When the player stands, it's the end of their turn, and the dealer begins drawing their third, fourth, fifth card, and so on.  \n" +
                 "- If neither player nor dealer busts or gets BlackJack, the player with the highest score wins the round.\n" +
                 "- The dealer will keep drawing cards until they reach a hand valued at 17 or higher.    \n" +
-        "**********************************************************************************************************************************************************");
+        "********************************************************************************************************************************************************** \n");
 
         //Create and start the Game
         Game blackjack = new Game();
