@@ -17,6 +17,21 @@ public class Hand {
         hand.add(deck.takeCard());
     }
 
+
+    /**
+     *
+     * @param discardDeck The deck we're discarding this hand to
+     */
+    public void discardHandToDeck(Deck discardDeck){
+
+        //copy cards from hand to discardDeck
+        discardDeck.addCards(hand);
+
+        //clear the hand
+        hand.clear();
+
+    }
+
     //we need to print the dealer's/player's current hand
     //The method iterates through the arraylist of Card objects called HAND and concatenates the toString
     // representation of each card in the hand array
