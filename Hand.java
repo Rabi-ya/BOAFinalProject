@@ -1,4 +1,4 @@
-package JAVAProjects.boAFinalProject;
+package boaFinalProject;
 
 //represent the cards the player and the dealer are holding, and get the total value of the cards in their hand
 import java.util.ArrayList;
