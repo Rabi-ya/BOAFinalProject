@@ -1,5 +1,4 @@
 package boaFinalProject;
-
 import java.util.Scanner;
 
 /*

@@ -1,6 +1,5 @@
 package boaFinalProject;
 
-
  //Used for shared logic between the dealer and player
 
 public abstract class Person {
