@@ -1,3 +1,5 @@
+package boaFinalProject;
+
 //Handles all Dealer specific operations
 public class Dealer extends Person{
 
